@@ -146,18 +146,71 @@ body {
     font-size: 1.2rem;
     opacity: 0.9; 
 }
-
-.badge { 
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(5px);
-    padding: 6px 16px; 
-    border-radius: 20px; 
-    font-size: 0.85rem; 
-    margin-bottom: 25px; 
-    display: inline-block;
-    border: 1px solid rgba(255,255,255,0.3);
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 20px;
+    border-radius: 100px; 
+    
+    background-color: rgba(255, 255, 255, 0.95); 
+    border: 1px solid rgba(0, 0, 0, 0.05); 
+    color: #4f9d73; 
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4f9d73;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    
+    box-shadow: 0 0 0 4px rgba(79, 157, 115, 0.2); 
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 0 0px rgba(79, 157, 115, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(79, 157, 115, 0); }
+    100% { box-shadow: 0 0 0 0px rgba(79, 157, 115, 0); }
+}
+
+.dot {
+    animation: pulse-glow 2s infinite;
+}
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid #ffffff; 
+    display: inline-block;
+}
 .notes-section { 
     padding: 100px 8%; 
     text-align: center; 
@@ -186,7 +239,7 @@ body {
 .card {
     background: var(--card-bg);
     padding: 32px;
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     text-align: left;
     flex: 1;
@@ -205,7 +258,7 @@ body {
 .icon-box { 
     width: 48px; 
     height: 48px; 
-    border-radius: 12px; 
+    border-radius: 100px; 
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -216,8 +269,8 @@ body {
     width: 24px;
 }
 
-.red { background: #fee2e2; }
-.red img { filter: invert(34%) sepia(85%) saturate(2641%) hue-rotate(338deg) brightness(101%) contrast(101%); }
+.red {background: rgba(249, 85, 85, 1); }
+
 
 .brain-section { 
     padding: 100px 8%; 
@@ -235,9 +288,10 @@ body {
 }
 
 .brain-image img { 
-    width: 100%; 
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 90%; 
+    border-radius: 10px;
+    border: 1px solid rgba(88, 164, 116, 0.1);
+    background: url(image);
 }
 
 .label { 
@@ -276,7 +330,7 @@ body {
 .cta-card { 
     background: #f0f7f2; 
     padding: 80px 40px; 
-    border-radius: 30px;
+    border-radius: 10px;
     border: 1px solid rgba(88, 164, 116, 0.1);
 }
 
@@ -299,13 +353,46 @@ body {
     margin-bottom: 40px; 
 }
 
-.social-icons a {
-    display: inline-block;
-    transition: transform 0.3s ease;
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px;
 }
 
-.social-icons a:hover {
-    transform: scale(1.2);
+.social-title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 16px; 
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    background-color: white; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-decoration: none;
+}
+
+.social-icon img {
+    width: 18px;
+    height: auto;
+
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: #f0f0f0;
 }
 
 .footer hr { 

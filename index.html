@@ -5,30 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KV - Knowledge Vault</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">
-            <img src="assets/logo-navbar.png" alt="KV Logo"> 
+            <img src="assets/logo-navbar.png" alt="KV Logo">
         </div>
         <ul class="nav-links">
             <li><a href="#">Features</a></li>
             <li><a href="#">How It Works</a></li>
             <li><a href="#">Why It's Different</a></li>
         </ul>
-        <button class="btn btn-primary">Get Early Access</button>
+        <div class="nav-right">
+            <button class="btn btn-primary">Get Early Access</button>
+        </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content">
-            <span class="badge">Early Access Now Open</span>
+            <div class="badge-container">
+                <span class="badge">● Early Access Now Open</span>
+            </div>
             <h1>Structured Thinking, <br><span class="highlight">Not Just Note-Taking.</span></h1>
             <p>A private space to store notes, links, and learning summaries—designed to help you think clearly, connect ideas, and turn learning into long-term knowledge.</p>
             <div class="hero-btns">
-                <button class="btn btn-primary">Start Building Your Vault &rarr;</button>
-                <button class="btn btn-outline"><i class="fa-regular fa-circle-play"></i> See How It Works</button>
+                <button class="btn btn-primary">Start Building Your Vault <img src="assets/ArrowRight.png" class="btn-icon"></button>
+                <button class="btn btn-outline"><img src="" class="btn-icon"> See How It Works</button>
             </div>
         </div>
     </header>
@@ -39,22 +42,22 @@
         
         <div class="card-grid">
             <div class="card">
-                <div class="icon-box red"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="icon-box red"><img src="assets/Vector.png" alt="Icon"></div>
                 <h3>Scattered Notes</h3>
                 <p>Your ideas live in 10 different apps, none of them connected.</p>
             </div>
             <div class="card">
-                <div class="icon-box orange"><i class="fa-solid fa-bookmark"></i></div>
+                <div class="icon-box orange"><img src="assets/Bookmarks.png" alt="Icon"></div>
                 <h3>Bookmark Overload</h3>
                 <p>Hundreds of saved links you'll never revisit or remember.</p>
             </div>
             <div class="card">
-                <div class="icon-box pink"><i class="fa-solid fa-brain"></i></div>
+                <div class="icon-box pink"><img src="assets/Brain.png" alt="Icon"></div>
                 <h3>No Idea Connections</h3>
                 <p>Insights stay isolated, never building into bigger understanding.</p>
             </div>
             <div class="card">
-                <div class="icon-box red-light"><i class="fa-solid fa-circle-info"></i></div>
+                <div class="icon-box red-light"><img src="assets/Info.png" alt="Icon"></div>
                 <h3>Forgetting What You Learned</h3>
                 <p>Knowledge fades because there's no system to retain it.</p>
             </div>
@@ -64,17 +67,17 @@
     <section class="brain-section">
         <div class="brain-container">
             <div class="brain-image">
-                <img src="assets/knowledge.png" alt="Second Brain Illustration">
+                <img src="assets/knowledge.png" alt="Knowledge Illustration">
             </div>
             <div class="brain-text">
                 <span class="label">THE SOLUTION</span>
                 <h2>Your Second Brain, Structured By Design.</h2>
                 <p>Personal Knowledge Vault isn't another note-taking app. It's a thinking environment where every note, link, and summary becomes part of an interconnected web of understanding.</p>
                 <ul class="check-list">
-                    <li><i class="fa-solid fa-circle-check"></i> Capture ideas with structure built-in from day one</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Connect related concepts automatically as you write</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Build lasting knowledge through reflection prompts</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Find anything instantly with semantic search</li>
+                    <li><img src="assets/CheckCircle.png"> Capture ideas with structure built-in from day one</li>
+                    <li><img src="assets/CheckCircle.png"> Connect related concepts automatically as you write</li>
+                    <li><img src="assets/CheckCircle.png"> Build lasting knowledge through reflection prompts</li>
+                    <li><img src="assets/CheckCircle.png"> Find anything instantly with semantic search</li>
                 </ul>
             </div>
         </div>
@@ -84,7 +87,7 @@
         <div class="cta-card">
             <h2>Ready To Think More Clearly?</h2>
             <p>Join thousands of learners who are building their personal knowledge vaults. <br> Start free, no credit card required.</p>
-            <button class="btn btn-primary btn-large">Get Early Access &rarr;</button>
+            <button class="btn btn-primary btn-large">Get Early Access <img src="assets/ArrowRight.png" class="btn-icon"></button>
             <p class="small-text">Free during early access • No credit card needed</p>
         </div>
     </section>
@@ -92,14 +95,12 @@
     <footer class="footer">
         <div class="footer-top">
             <div class="logo">
-                <img src="/assets/logo-footer.png" alt="KV Logo"> 
+                <img src="assets/logo-footer.png" alt="KV Logo">
             </div>
             <div class="socials">
                 <span>Social Links</span>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-slack"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><img src="assets/Vector.png" style="width:20px; filter:invert(1);"></a>
                 </div>
             </div>
         </div>

@@ -146,6 +146,7 @@ body {
     font-size: 1.2rem;
     opacity: 0.9; 
 }
+
 .badge {
     display: inline-flex;
     align-items: center;
@@ -247,6 +248,7 @@ body {
     max-width: 322px;
     transition: var(--transition);
     border: 1px solid transparent;
+    margin-bottom: 0;
 }
 
 .card:hover {
@@ -329,7 +331,7 @@ body {
 
 .cta-card { 
     background: #f0f7f2; 
-    padding: 80px 40px; 
+    padding: 70px 30px; 
     border-radius: 10px;
     border: 1px solid rgba(88, 164, 116, 0.1);
 }
@@ -356,43 +358,46 @@ body {
 .socials {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    gap: 15px;
+    align-items: flex-end; 
+    gap: 12px;
 }
 
-.social-title {
-    color: white;
+.socials span {
     font-size: 1.1rem;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    color: white;
 }
 
 .social-icons {
     display: flex;
-    gap: 16px; 
+    gap: 15px;
 }
 
-.social-icon {
-    width: 32px;
-    height: 32px;
+.social-icons a {
+    width: 35px;
+    height: 35px;
     background-color: white; 
-    border-radius: 50%; 
+    color: #05141f; 
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.2s ease, background-color 0.2s ease;
     text-decoration: none;
+    font-size: 18px; 
+    transition: all 0.3s ease;
 }
 
-.social-icon img {
-    width: 18px;
-    height: auto;
-
+.social-icons a:hover {
+    transform: scale(1.1); 
+    background-color: #58a474; 
+    color: white;
 }
-
-.social-icon:hover {
-    transform: translateY(-3px);
-    background-color: #f0f0f0;
+.footer-socials {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 15px;             
+    text-align: center; 
 }
 
 .footer hr { 
